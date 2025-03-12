@@ -1,0 +1,8 @@
+<ul>
+    <li *ngFor="let book of books" (click)="selectBook(book)">
+      {{ book.title }} - {{ book.author }}
+    </li>
+  </ul>
+  
+  <app-book-detail *ngIf="selectedBook" [book]="selectedBook"></app-book-detail>
+  
